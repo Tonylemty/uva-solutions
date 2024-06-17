@@ -1,57 +1,46 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <string.h>
+#include <stdio.h>
 
-int countMed(int streets[], int r) {
-    int med;
-
-    if (r % 2 == 0) {
-        med = (streets[(r / 2) - 1] + streets[r / 2]) / 2;
-    }
-
-    else {
-        med = streets[r / 2];
-    }
-    return med;
+int compare(const void *a, const void *b) {
+    return (*(int*)a - *(int*)b);
 }
 
-int countSum (int streets[], int med, int times) {
-    int sum = 0;
+int countMid(int streets[], int num) {
+    if (num % 2 == 0)
+        return (streets[(num / 2) - 1] + streets[num / 2]) / 2;
+    
+    else    
+        return streets[num / 2];
+}
 
-    for (int i = 0; i < times; i++) {
-        sum += abs(streets[i] - med);
+int countSum(int streets[], int mid, int num) {
+    int i, sum = 0;
+    for (i = 0; i < num; i++) {
+        sum += abs(streets[i] - mid);
     }
     return sum;
 }
 
 int main() {
-
-    int testcases, relatives, med, sum;
+    int i, testcases, rNum, mid, sum;
 
     scanf("%d", &testcases);
 
-    for (int i = 0; i < testcases; i++) {
-        scanf("%d", &relatives);
-        int streets[relatives];
+    while (testcases--) {
+        scanf("%d", &rNum);
+        int streets[rNum];
 
-        for (int j = 0; j < relatives; j++) {
-            scanf("%d", &streets[j]);
+        for (i = 0; i < rNum; i++) {
+            scanf("%d", &streets[i]);
         }
-
-        for (int i = relatives - 1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-
-                if (streets[j] > streets[j + 1]) {
-                    int temp = streets[j];
-                    streets[j] = streets[j + 1];
-                    streets[j + 1] = temp;
-                }
-            }
-        }
-        med = countMed(streets, relatives);
-        sum = countSum(streets, med, relatives);
+        qsort(streets, rNum, sizeof(int), compare);
+        mid = countMid(streets, rNum);
+        sum = countSum(streets, mid, rNum);
 
         printf("%d\n", sum);
+        memset(streets, 0, sizeof(streets));
+
     }
 
     return 0;
