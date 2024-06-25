@@ -1,57 +1,52 @@
 #include <stdio.h>
-#include <assert.h>
-
+#include <stdlib.h>
 
 int main() {
+     
+    int i, j, n, check, cases = 1;
+    int sequence[1000];
 
-    int i, j, size, flag, cases = 1;
 
-    while (scanf("%d", &size) != EOF) {
+    while (scanf(" %d", &n) != EOF) {
 
-        int arr[size];
+        check = 1;
+        for (i = 0; i < n; i++) {
+            scanf("%d", &sequence[i]);
 
-        flag = 1;
-        for (i = 0; i < size; i++) {
-            scanf("%d", &arr[i]);
-
-            if (arr[i] < 1) {
-                flag = 0;
-            }
-
-            if (i != 0 && arr[i - 1] >= arr[i]) {
-                flag = 0;
-            }
+            if (sequence[i] < 1)
+                check = 0;
+            
+            if (i != 0 && (sequence[i - 1] >= sequence[i]))
+                check = 0;
         }
+        int sum[20001] = {0};
 
-        int sumArray[20001] = {0};
+        for (i = 0; i < n; i++) {
+            for (j = i; j < n; j++) {
+                int tmp = sequence[i] + sequence[j];
 
-
-        if (flag) {
-            for (i = 0; i < size; i++) {
-                for (j = i; j < size; j++) {
-                    int sum = arr[i] + arr[j];
-                    if (sumArray[sum] == 0) {
-                        sumArray[sum] = 1;
-                    }
-                    else {
-                        flag = 0;
-                    }
+                if (sum[tmp] == 0) {
+                    sum[tmp] = 1;
+                }
+                else {
+                    check = 0;
+                    break;
                 }
             }
+            if (!check)
+                break;
         }
-        
-        if (flag == 0) {
-            printf("Case #%d: It is not a B2-Sequence.\n", cases);
-        }
-        else {
+
+        if (check) {
             printf("Case #%d: It is a B2-Sequence.\n", cases);
         }
+        else {
+            printf("Case #%d: It is not a B2-Sequence.\n", cases);
+        }
         printf("\n");
-
         cases++;
+
     }
-
-
 
     return 0;
 }
