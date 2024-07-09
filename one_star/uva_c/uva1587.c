@@ -21,7 +21,8 @@ int main() {
     Pallet pallet[6];    
 
     while (scanf("%d %d", &pallet[0].width, &pallet[0].height) != EOF) {
-
+        
+        // 確保寬度一定小於或等於高度
         if (pallet[0].width > pallet[0].height) {
             int temp = pallet[0].width;
             pallet[0].width = pallet[0].height;
@@ -41,17 +42,27 @@ int main() {
         qsort(pallet, 6, sizeof(Pallet), compare);
         
         int ok = 1;
+
+        
         for (i = 1; i < 4; i++) {
+            // 檢查前三塊木板的寬度是否相等
             if (pallet[i].width != pallet[0].width)
                 ok = 0;
+
+            // 檢查最後三塊木板的高度是否相等        
             if (pallet[5 - i].height != pallet[5].height)
                 ok = 0;
         }
+
+        // 檢查第四塊和第五塊木板的寬度是否相等
         if (pallet[4].width != pallet[5].width)
             ok = 0;
         
+        // 檢查第一塊和第二塊木板的高度是否相等
         if (pallet[0].height != pallet[1].height)
             ok = 0;
+        
+        // 檢查第一塊木板的高度是否等於第六塊木板的寬
         if (pallet[0].height != pallet[5].width)
             ok =0;
 
