@@ -8,11 +8,12 @@ void removeNonNumericChars(char *str) {
     int writer = 0, reader = 0;
     while (str[reader]) {
         if (isdigit(str[reader])) {
+            // 進到 if 判斷式中，writer 才會進行遞增 1 
             str[writer++] = str[reader];
         }
         reader++;
     }
-    str[writer] = 0;
+    str[writer] = 0; // 將 writer 當前指向的位置設為字符串結束符
 }
 
 int main() {
@@ -67,7 +68,8 @@ int main() {
 
         if (strcmp(output, answer) != 0) pe = 0;
         if (pe) {
-            printf("Run #%d: Presentation Error\n", times);
+            // 非數字字符與答案相異導致的錯誤，所以數字字符與答案是匹配且順序是相同的
+            printf("Run #%d: Presentation Error\n", times); 
             continue;
         }
 
