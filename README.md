@@ -25,8 +25,8 @@ If you have any suggestions regarding the code or the content written, please fe
 
 ### **Introduction of CPE Test**
 
-**What is CPE?**
+**What is CPE?** <br>
 The CPE (Collegiate Programming Examination) is a college programming examination in Taiwan. Its purpose is to select suitable candidates to participate in the ICPC.
 
-**Types of the Questions in CPE**
+**Types of the Questions in CPE** <br>
 The exam question types are primarily practical implementation tasks, which are sourced from the Online Judge. There are a total of seven such tasks, and the difficulty of the questions increases with the number of tasks.
