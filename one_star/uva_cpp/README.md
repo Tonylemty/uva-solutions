@@ -1,9 +1,10 @@
-## CPE一星題解答
+## CPE One-Star Problem Solutions
 
-* 以Uva題號及題目進行命名
-* 以online judge作為評測平台
-* 答案內容皆以C++語言寫成
-* 此資料夾一星題是CPE一星選集外的一星題
+* Named according to UVA problem numbers and titles.
+* Use an online judge as the evaluation platform.
+* All solutions are written in C++ language.
+* This folder contains one-star problems outside the CPE one-star selection.
 
-## 特殊「提交」介紹
-* 提交中若有附註「OOP way」，表示此題是透過物件導向的方式進行撰寫
+## Special "Commit" Explanations
+* If a commit has a note "OOP way," it means the problem was solved using an object-oriented approach.
+* If the filename includes a "-number," it indicates there are different solutions for the same problem.
