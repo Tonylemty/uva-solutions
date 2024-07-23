@@ -1,11 +1,11 @@
-## **CPE 49題顆星選集**
+## **Selected 49 Questions of CPE**
 
 <br>
 
-- 以online judge作為評測平台
-- 以Uva題目及題號命名(檔名:題號;commit message:題目名稱)
-- 答案內容以C語言編寫而成
-- 不同題目會有多種解法
+- Using an online judge as the evaluation platform
+- Name the files with the problem number and use the problem name as the commit message (Filename: problem number; Commit message: problem name)
+- The solutions should be written in C language
+- Different problems may have multiple solutions
 
     
 
