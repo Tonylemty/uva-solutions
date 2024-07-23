@@ -1,23 +1,32 @@
-## **CPE 題目解答**
+## **CPE Solutions**
 
 <br>
 
-### **目錄** :closed_book:
+### **Contents** :closed_book:
 
-* [CPE 49題精選題目](https://github.com/Tonylemty/CPE/tree/main/50-stars)
-* [CPE其他一星題](https://github.com/Tonylemty/CPE/tree/main/one_star)
+* [Selected 49 Questions of CPE](https://github.com/Tonylemty/CPE/tree/main/50-stars)
+* [Other one star Questions of CPE](https://github.com/Tonylemty/CPE/tree/main/one_star)
 
-### **待新增項目**  :bangbang:
+### **Items to be added**  :bangbang:
 
-* 新增CPE的歷屆題目解法（1~3題）
-* 新增同樣題目的其他解法
+* Two star Questions of CPE
+* The OOP solutions
+* Other solutions in the same question
 
-### **如何提交回饋**  :thinking: :thinking: :thinking:
+### **How to submit your feedback**  :thinking: :thinking: :thinking:
 
-若同學對程式碼或是編寫內容有什麼建議的話，歡迎寫信到 411221315@gms.ndhu.edu.tw ，我會針對各位的意見去進行修改
+If you have any suggestions regarding the code or the content written, please feel free to email 411221315@gms.ndhu.edu.tw. I will make revisions based on your feedback.
 
-### **禁止行為** :no_entry_sign:
+### **Prohibited behavior** :no_entry_sign:
 
-* 禁止對解答或是其他檔案進行任何修改
-* 禁止新增其他檔案到資料夾當中
-* 禁止傳送任何非相關訊息至信箱
+* Modification of the answers or other files is prohibited
+* Adding unrelated files to the folder is prohibited
+* Sending any unrelated messages to the email is prohibited
+
+### **Introduction of CPE Test**
+
+**What is CPE?**
+The CPE (Collegiate Programming Examination) is a college programming examination in Taiwan. Its purpose is to select suitable candidates to participate in the ICPC.
+
+**Types of the Questions in CPE**
+The exam question types are primarily practical implementation tasks, which are sourced from the Online Judge. There are a total of seven such tasks, and the difficulty of the questions increases with the number of tasks.
