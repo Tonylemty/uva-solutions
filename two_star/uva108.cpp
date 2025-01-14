@@ -18,11 +18,11 @@ int main() {
         }
 
         max_sum = INT_MIN;
-        for (int i = 1; i <= N; i++) { // i 表示的是子矩陣上邊界
-            for (int j = i; j <= N; j++) { // j 表示的是子矩陣的下邊界
+        for (int i = 1; i <= N; i++) { // i 表示的是子矩陣上邊界（行）
+            for (int j = i; j <= N; j++) { // j 表示的是子矩陣的下邊界（行）
                 int temp = 0;
                 for (int k = 1; k <= N; k++) {
-                    temp += sum[k][j] - sum[k][i - 1];                           
+                    temp += sum[k][j] - sum[k][i - 1];                        
 
                     if (temp > max_sum) max_sum = temp;
                     if (temp < 0) temp = 0;
