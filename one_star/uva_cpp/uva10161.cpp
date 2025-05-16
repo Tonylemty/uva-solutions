@@ -66,3 +66,76 @@ int main() {
     
     return 0;
 }
+
+/* second version
+#include <iostream>
+using namespace std;
+
+int countRow(int layer, long dia, long time) { 
+    int i;
+    int row = layer;
+    int temp = layer;
+    if (layer % 2) i = -1;
+    else i = 1;
+
+    layer--;
+    bool find = false;
+    while (layer--) {
+        temp--;
+        dia += i;
+        if (dia == time)  {
+            find = true;
+            break;
+        }
+    }
+    return find ? temp : row;
+}
+
+int countCol(int layer, long dia, long time) { 
+    int i;
+    int col = layer;
+    int temp = layer;
+    if (layer % 2) i = 1;
+    else i = -1;
+
+    layer--;
+    bool find = false;
+    while (layer--) {
+        temp--;
+        dia += i;
+        if (dia == time)  {
+            find = true;
+            break;
+        }
+    }
+    return find ? temp : col;
+}  
+
+int main() {
+
+    int row, col;
+    long time, diagonal_time;
+
+    while (cin >> time && time != 0) {
+
+        int i = 1, total = 0, layer = 0;
+        diagonal_time = 1;
+        while (total < time) {
+            total += i; 
+            i += 2; 
+            diagonal_time += (layer * 2); 
+            layer++;
+        }
+        
+        
+        row = countRow(layer, diagonal_time, time);
+        col = countCol(layer, diagonal_time, time);
+
+        cout << col << " " << row << endl;
+
+        
+    }
+    
+    return 0;
+}
+*/
